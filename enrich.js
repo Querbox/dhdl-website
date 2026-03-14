@@ -13,24 +13,36 @@ const enrichment = JSON.parse(fs.readFileSync('data/enrichment.json', 'utf8'));
 // Build lookup by normalized name + season
 function normalize(name) {
   return name.toLowerCase()
-    .replace(/[^a-z0-9äöüß]/g, '')
-    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+// Also create a shorter key (first 6 alphanum chars + season) for fuzzy matching
+function shortKey(name) {
+  return name.toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]/g, '').substring(0, 8);
 }
 
 const enrichMap = new Map();
+const enrichShortMap = new Map();
 for (const e of enrichment) {
   const key = normalize(e.name) + '_' + e.season;
   enrichMap.set(key, e);
-  // Also store without season for fuzzy matching
   if (!enrichMap.has(normalize(e.name))) {
     enrichMap.set(normalize(e.name), e);
   }
+  // Short key with season for fuzzy
+  const sk = shortKey(e.name) + '_' + e.season;
+  if (!enrichShortMap.has(sk)) enrichShortMap.set(sk, e);
 }
 
 let matched = 0, unmatched = 0;
+const unmatchedNames = [];
 for (const s of startups) {
   const key = normalize(s.name) + '_' + s.season;
-  const e = enrichMap.get(key) || enrichMap.get(normalize(s.name));
+  const sk = shortKey(s.name) + '_' + s.season;
+  const e = enrichMap.get(key) || enrichMap.get(normalize(s.name)) || enrichShortMap.get(sk);
 
   if (e) {
     matched++;
@@ -51,8 +63,12 @@ for (const s of startups) {
     }
   } else {
     unmatched++;
+    unmatchedNames.push(`S${s.season}: ${s.name}`);
   }
 }
 
 fs.writeFileSync('data/startups.json', JSON.stringify(startups, null, 2));
 console.log(`Enriched: ${matched} matched, ${unmatched} unmatched out of ${startups.length}`);
+if (process.argv.includes('--show-unmatched')) {
+  unmatchedNames.forEach(n => console.log('  UNMATCHED: ' + n));
+}

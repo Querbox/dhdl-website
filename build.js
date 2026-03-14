@@ -215,6 +215,36 @@ function pageShell(options) {
 
 // ========== Generate Startup Pages ==========
 
+function generateDescription(s) {
+  var name = s.name;
+  var product = s.product || '';
+  var d = s.deal || {};
+  var investorNames = (d.investors || []).map(function(id) {
+    var inv = investors.find(function(i) { return i.id === id; });
+    return inv ? inv.name : id;
+  }).filter(Boolean);
+
+  var parts = [];
+  if (product) {
+    parts.push(name + ' bietet ' + product + '.');
+  } else {
+    parts.push(name + ' ist ein Startup aus Die H\u00f6hle der L\u00f6wen.');
+  }
+
+  // Deal info
+  if (d.status === 'completed' && d.agreed_investment) {
+    var invStr = investorNames.length > 0 ? ' von ' + investorNames.join(' und ') : '';
+    parts.push('In Staffel ' + s.season + ' erhielt das Startup einen Deal \u00fcber ' + formatCurrency(d.agreed_investment) + ' f\u00fcr ' + (d.agreed_equity || '?') + '% Firmenanteile' + invStr + '.');
+  } else if (d.status === 'no_deal') {
+    parts.push('Das Startup pr\u00e4sentierte sich in Staffel ' + s.season + ' bei DHDL, erhielt jedoch keinen Deal.');
+  } else if (d.status === 'collapsed') {
+    var invStr2 = investorNames.length > 0 ? ' mit ' + investorNames.join(' und ') : '';
+    parts.push('In Staffel ' + s.season + ' wurde zun\u00e4chst ein Deal' + invStr2 + ' vereinbart, der jedoch nach der Show nicht zustande kam.');
+  }
+
+  return parts.join(' ');
+}
+
 function generateStartupPage(startup) {
   var basePath = '../../';
   var investorNames = (startup.deal && startup.deal.investors)
@@ -344,10 +374,10 @@ function generateStartupPage(startup) {
   <div class="container">
     <div class="detail-layout">
       <div class="detail-layout__main">
-        ${startup.description ? `<section class="content-section">
+        <section class="content-section">
           <h2 class="content-section__title">\u00dcber ${escapeHtml(startup.name)}</h2>
-          <p style="color: var(--color-text-secondary); line-height: 1.8;">${escapeHtml(startup.description)}</p>
-        </section>` : ''}
+          <p style="color: var(--color-text-secondary); line-height: 1.8;">${escapeHtml(startup.description || generateDescription(startup))}</p>
+        </section>
         ${timelineHtml}
         ${foundersHtml}
         ${startup.status_detail ? `<section class="content-section">
