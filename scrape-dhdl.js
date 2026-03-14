@@ -151,20 +151,8 @@ function parseEpisodePage(html, seasonNum, episodeNum, airDate) {
     // Try to find link to startup detail page for more info
     const detailLink = block.match(/href="(https?:\/\/www\.dhdl\.info\/gruender\/[^"]+)"/i);
 
-    // Extract product name from Amazon product titles
+    // Product field left empty - will be enriched from research data
     let product = '';
-    const amazonMatch = block.match(/Produkte von[\s\S]*?<a[^>]*title="[^"]*Amazon[^"]*"[^>]*>([^<]+)/i);
-    if (amazonMatch) {
-      product = amazonMatch[1].replace(/&[^;]+;/g, ' ').trim();
-      // Clean up Amazon-style titles
-      product = product.replace(/\s*ab\s*$/, '').replace(/\s*\d+[.,]\d+\s*€.*$/, '').trim();
-      if (product.length > 150) product = product.substring(0, 147) + '...';
-    }
-    // Fallback: try gruender link text
-    if (!product) {
-      const grMatch = block.match(/mehr zu ([^➔<]+)/i);
-      if (grMatch) product = grMatch[1].trim();
-    }
 
     startups.push({
       id: slugify(name),
