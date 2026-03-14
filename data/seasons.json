@@ -14,5 +14,8 @@
   { "id": 13, "year": 2023, "episodes": 10, "slug": "staffel-13", "channel": "VOX", "premiere": "2023-04-03" },
   { "id": 14, "year": 2023, "episodes": 10, "slug": "staffel-14", "channel": "VOX", "premiere": "2023-09-04" },
   { "id": 15, "year": 2024, "episodes": 10, "slug": "staffel-15", "channel": "VOX", "premiere": "2024-04-08" },
-  { "id": 16, "year": 2024, "episodes": 10, "slug": "staffel-16", "channel": "VOX", "premiere": "2024-09-02" }
+  { "id": 16, "year": 2024, "episodes": 10, "slug": "staffel-16", "channel": "VOX", "premiere": "2024-09-02" },
+  { "id": 17, "year": 2025, "episodes": 10, "slug": "staffel-17", "channel": "VOX", "premiere": "2025-04-07" },
+  { "id": 18, "year": 2025, "episodes": 10, "slug": "staffel-18", "channel": "VOX", "premiere": "2025-09-01" },
+  { "id": 19, "year": 2026, "episodes": 10, "slug": "staffel-19", "channel": "VOX", "premiere": "2026-03-02" }
 ]
