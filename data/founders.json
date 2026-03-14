@@ -1,0 +1,82 @@
+[
+  {
+    "id": "stefan-lemcke",
+    "name": "Stefan Lemcke",
+    "slug": "stefan-lemcke",
+    "startups": ["ankerkraut"],
+    "bio": "Mitgründer von Ankerkraut. Zusammen mit seiner Frau Anne hat er das Gewürzunternehmen in Hamburg aufgebaut.",
+    "image": "images/founders/stefan-lemcke.jpg"
+  },
+  {
+    "id": "anne-lemcke",
+    "name": "Anne Lemcke",
+    "slug": "anne-lemcke",
+    "startups": ["ankerkraut"],
+    "bio": "Mitgründerin von Ankerkraut. Verantwortlich für Marketing und Produktentwicklung.",
+    "image": "images/founders/anne-lemcke.jpg"
+  },
+  {
+    "id": "lena-juengst",
+    "name": "Lena Jüngst",
+    "slug": "lena-juengst",
+    "startups": ["air-up"],
+    "bio": "Mitgründerin von air up. Entwickelte die Idee der Duft-Trinkflasche während ihres Studiums.",
+    "image": "images/founders/lena-juengst.jpg"
+  },
+  {
+    "id": "tim-jaeger",
+    "name": "Tim Jäger",
+    "slug": "tim-jaeger",
+    "startups": ["air-up"],
+    "bio": "Mitgründer von air up. Verantwortlich für die technische Entwicklung der Duft-Pods.",
+    "image": "images/founders/tim-jaeger.jpg"
+  },
+  {
+    "id": "benjamin-kremer",
+    "name": "Benjamin Kremer",
+    "slug": "benjamin-kremer",
+    "startups": ["yfood"],
+    "bio": "Mitgründer von YFood. Entwickelte die Idee vollwertiger Trinkmahlzeiten.",
+    "image": "images/founders/benjamin-kremer.jpg"
+  },
+  {
+    "id": "noel-strecker",
+    "name": "Noël Strecker",
+    "slug": "noel-strecker",
+    "startups": ["yfood"],
+    "bio": "Mitgründer von YFood. Zuständig für Geschäftsentwicklung und Marketing.",
+    "image": "images/founders/noel-strecker.jpg"
+  },
+  {
+    "id": "daniel-dohmen",
+    "name": "Daniel Dohmen",
+    "slug": "daniel-dohmen",
+    "startups": ["paudar"],
+    "bio": "Gründer von PAUDAR. Erfand das Bratfett in Pulverform.",
+    "image": "images/founders/daniel-dohmen.jpg"
+  },
+  {
+    "id": "eugen-raimkulow",
+    "name": "Eugen Raimkulow",
+    "slug": "eugen-raimkulow",
+    "startups": ["pinky-gloves"],
+    "bio": "Mitgründer von Pinky Gloves.",
+    "image": "images/founders/eugen-raimkulow.jpg"
+  },
+  {
+    "id": "andre-ritterwuerden",
+    "name": "André Ritterwürden",
+    "slug": "andre-ritterwuerden",
+    "startups": ["pinky-gloves"],
+    "bio": "Mitgründer von Pinky Gloves.",
+    "image": "images/founders/andre-ritterwuerden.jpg"
+  },
+  {
+    "id": "markus-dworak",
+    "name": "Markus Dworak",
+    "slug": "markus-dworak",
+    "startups": ["smartsleep"],
+    "bio": "Gründer von Smartsleep. Schlafforscher und Neurowissenschaftler.",
+    "image": "images/founders/markus-dworak.jpg"
+  }
+]

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alle Investoren (Löwen) aus Die Höhle der Löwen im Überblick. Deals, Fokus-Branchen und Portfolios.">
+  <meta name="robots" content="index, follow">
+  <title>Investoren (Die Löwen) – DHDL Startup-Datenbank</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="../../index.html" class="header__logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#1d1d1f"/>
+          <text x="14" y="20" text-anchor="middle" fill="white" font-size="16" font-weight="bold">L</text>
+        </svg>
+        DHDL<span>DB</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="../../index.html" class="nav__link">Home</a>
+        <a href="../startups/" class="nav__link">Startups</a>
+        <a href="../investors/" class="nav__link nav__link--active">Investoren</a>
+        <a href="../seasons/" class="nav__link">Staffeln</a>
+        <a href="../was-wurde-aus/" class="nav__link">Was wurde aus…?</a>
+        <button class="nav__search-btn" id="searchBtn" type="button" aria-label="Suche öffnen">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Suche…
+          <kbd>⌘K</kbd>
+        </button>
+      </nav>
+      <button class="header__menu-btn" id="menuBtn" type="button" aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Search Modal -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal__input-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-modal__input" id="searchInput" placeholder="Startup, Investor oder Produkt suchen…" autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="search-results__empty">Tippe einen Suchbegriff ein…</div>
+      </div>
+      <div class="search-modal__footer">
+        <span><kbd>↑↓</kbd> Navigieren</span>
+        <span><kbd>↵</kbd> Öffnen</span>
+        <span><kbd>Esc</kbd> Schließen</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <nav class="page-header__breadcrumb">
+        <a href="../../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Investoren</span>
+      </nav>
+      <h1 class="page-header__title">Die Löwen</h1>
+      <p class="page-header__description">
+        Alle Investoren aus „Die Höhle der Löwen" – von den ersten Staffeln bis heute.
+        Erfahre, wer die meisten Deals gemacht hat und in welche Branchen sie investieren.
+      </p>
+    </div>
+  </div>
+
+  <!-- Investors -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Aktuelle Löwen</h2>
+          <p class="section-header__subtitle">Die Investoren der aktuellen Staffel</p>
+        </div>
+      </div>
+
+      <div class="grid grid--3" id="investorsGrid">
+        <!-- Investor Cards -->
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 96px; height: 96px; font-size: 1.75rem; margin: 0 auto var(--space-md);">RD</div>
+            <h3 class="card__title"><a href="ralf-duemmel.html">Ralf Dümmel</a></h3>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-sm);">DS Produkte</p>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-md);">
+              Handelsexperte und Geschäftsführer von DS Produkte, spezialisiert auf Konsumgüter.
+            </p>
+            <div class="flex flex--wrap" style="justify-content: center; gap: 0.5rem; margin-bottom: var(--space-md);">
+              <span class="tag">Konsumgüter</span>
+              <span class="tag">Handel</span>
+              <span class="tag">Food</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">120 Deals</div>
+            <div class="text-xs text-tertiary">Staffel 3–16</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 96px; height: 96px; font-size: 1.75rem; margin: 0 auto var(--space-md);">CM</div>
+            <h3 class="card__title"><a href="carsten-maschmeyer.html">Carsten Maschmeyer</a></h3>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-sm);">Maschmeyer Group</p>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-md);">
+              Finanzunternehmer und Investor mit Fokus auf skalierbare Geschäftsmodelle.
+            </p>
+            <div class="flex flex--wrap" style="justify-content: center; gap: 0.5rem; margin-bottom: var(--space-md);">
+              <span class="tag">Finanzen</span>
+              <span class="tag">Technologie</span>
+              <span class="tag">Gesundheit</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">50 Deals</div>
+            <div class="text-xs text-tertiary">Staffel 3–16</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 96px; height: 96px; font-size: 1.75rem; margin: 0 auto var(--space-md);">DW</div>
+            <h3 class="card__title"><a href="dagmar-woehrl.html">Dagmar Wöhrl</a></h3>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-sm);">Wöhrl AG</p>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-md);">
+              Unternehmerin und ehemalige Politikerin mit Erfahrung im Einzelhandel.
+            </p>
+            <div class="flex flex--wrap" style="justify-content: center; gap: 0.5rem; margin-bottom: var(--space-md);">
+              <span class="tag">Einzelhandel</span>
+              <span class="tag">Soziales</span>
+              <span class="tag">Nachhaltigkeit</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">30 Deals</div>
+            <div class="text-xs text-tertiary">Staffel 4–16</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 96px; height: 96px; font-size: 1.75rem; margin: 0 auto var(--space-md);">NR</div>
+            <h3 class="card__title"><a href="nico-rosberg.html">Nico Rosberg</a></h3>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-sm);">Rosberg Ventures</p>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-md);">
+              Formel-1-Weltmeister und Investor mit Fokus auf Nachhaltigkeit und Mobilität.
+            </p>
+            <div class="flex flex--wrap" style="justify-content: center; gap: 0.5rem; margin-bottom: var(--space-md);">
+              <span class="tag">Nachhaltigkeit</span>
+              <span class="tag">Mobilität</span>
+              <span class="tag">GreenTech</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">25 Deals</div>
+            <div class="text-xs text-tertiary">Staffel 8–16</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 96px; height: 96px; font-size: 1.75rem; margin: 0 auto var(--space-md);">NG</div>
+            <h3 class="card__title"><a href="nils-glagau.html">Nils Glagau</a></h3>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-sm);">Orthomol</p>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-md);">
+              Geschäftsführer von Orthomol, investiert bevorzugt in Gesundheit und Sport.
+            </p>
+            <div class="flex flex--wrap" style="justify-content: center; gap: 0.5rem; margin-bottom: var(--space-md);">
+              <span class="tag">Gesundheit</span>
+              <span class="tag">Sport</span>
+              <span class="tag">Food</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">28 Deals</div>
+            <div class="text-xs text-tertiary">Staffel 7–16</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 96px; height: 96px; font-size: 1.75rem; margin: 0 auto var(--space-md);">TS</div>
+            <h3 class="card__title"><a href="tillman-schulz.html">Tillman Schulz</a></h3>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-sm);">MDS Group</p>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-md);">
+              Unternehmer und Geschäftsführer der MDS Group, spezialisiert auf Lebensmittel.
+            </p>
+            <div class="flex flex--wrap" style="justify-content: center; gap: 0.5rem; margin-bottom: var(--space-md);">
+              <span class="tag">Lebensmittel</span>
+              <span class="tag">Handel</span>
+              <span class="tag">FMCG</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">20 Deals</div>
+            <div class="text-xs text-tertiary">Staffel 11–16</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ehemalige Löwen -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Ehemalige Löwen</h2>
+          <p class="section-header__subtitle">Investoren, die nicht mehr aktiv in der Show sind</p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 80px; height: 80px; font-size: 1.5rem; margin: 0 auto var(--space-md);">FT</div>
+            <h3 class="card__title"><a href="frank-thelen.html">Frank Thelen</a></h3>
+            <p class="text-sm text-secondary">Freigeist Capital · Staffel 1–7</p>
+            <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-top: var(--space-sm);">35 Deals</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 80px; height: 80px; font-size: 1.5rem; margin: 0 auto var(--space-md);">JW</div>
+            <h3 class="card__title"><a href="judith-williams.html">Judith Williams</a></h3>
+            <p class="text-sm text-secondary">Cosmetics · Staffel 1–11</p>
+            <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-top: var(--space-sm);">42 Deals</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body" style="text-align: center; padding: var(--space-xl);">
+            <div class="investor-card__avatar" style="width: 80px; height: 80px; font-size: 1.5rem; margin: 0 auto var(--space-md);">GK</div>
+            <h3 class="card__title"><a href="georg-kofler.html">Georg Kofler</a></h3>
+            <p class="text-sm text-secondary">Social Chain · Staffel 5–12</p>
+            <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-top: var(--space-sm);">38 Deals</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">DHDL Startup-Datenbank</div>
+          <p>Die umfassende Datenbank aller Startups aus „Die Höhle der Löwen".</p>
+        </div>
+        <div>
+          <div class="footer__heading">Entdecken</div>
+          <a href="../startups/" class="footer__link">Alle Startups</a>
+          <a href="../investors/" class="footer__link">Investoren</a>
+          <a href="../seasons/" class="footer__link">Staffeln</a>
+        </div>
+        <div>
+          <div class="footer__heading">Top-Listen</div>
+          <a href="#" class="footer__link">Erfolgreichste Startups</a>
+          <a href="#" class="footer__link">Größte Deals</a>
+        </div>
+        <div>
+          <div class="footer__heading">Rechtliches</div>
+          <a href="../impressum.html" class="footer__link">Impressum</a>
+          <a href="../datenschutz.html" class="footer__link">Datenschutz</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>Kein offizielles Produkt von VOX oder RTL.</span>
+        <span>Open Source · Kein Tracking · DSGVO-konform</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/app.js"></script>
+  <script src="../../js/search.js"></script>
+</body>
+</html>

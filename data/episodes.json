@@ -1,0 +1,56 @@
+[
+  {
+    "id": "s03e03",
+    "season": 3,
+    "episode": 3,
+    "air_date": "2016-09-06",
+    "slug": "staffel-3-episode-3",
+    "investors_present": ["frank-thelen", "judith-williams", "carsten-maschmeyer", "ralf-duemmel", "dagmar-woehrl"],
+    "startups": ["ankerkraut"]
+  },
+  {
+    "id": "s06e01",
+    "season": 6,
+    "episode": 1,
+    "air_date": "2019-09-03",
+    "slug": "staffel-6-episode-1",
+    "investors_present": ["carsten-maschmeyer", "judith-williams", "georg-kofler", "ralf-duemmel", "dagmar-woehrl"],
+    "startups": ["smartsleep"]
+  },
+  {
+    "id": "s06e02",
+    "season": 6,
+    "episode": 2,
+    "air_date": "2019-09-10",
+    "slug": "staffel-6-episode-2",
+    "investors_present": ["frank-thelen", "carsten-maschmeyer", "judith-williams", "ralf-duemmel", "dagmar-woehrl"],
+    "startups": ["yfood"]
+  },
+  {
+    "id": "s06e08",
+    "season": 6,
+    "episode": 8,
+    "air_date": "2019-10-22",
+    "slug": "staffel-6-episode-8",
+    "investors_present": ["frank-thelen", "judith-williams", "georg-kofler", "ralf-duemmel", "dagmar-woehrl"],
+    "startups": ["paudar"]
+  },
+  {
+    "id": "s08e05",
+    "season": 8,
+    "episode": 5,
+    "air_date": "2020-10-05",
+    "slug": "staffel-8-episode-5",
+    "investors_present": ["frank-thelen", "judith-williams", "carsten-maschmeyer", "nico-rosberg", "ralf-duemmel"],
+    "startups": ["air-up"]
+  },
+  {
+    "id": "s09e04",
+    "season": 9,
+    "episode": 4,
+    "air_date": "2021-05-10",
+    "slug": "staffel-9-episode-4",
+    "investors_present": ["carsten-maschmeyer", "judith-williams", "georg-kofler", "ralf-duemmel", "nils-glagau"],
+    "startups": ["pinky-gloves"]
+  }
+]

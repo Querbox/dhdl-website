@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Die komplette Datenbank aller Startups aus Die Höhle der Löwen. Entdecke Deals, Investoren und was aus den Startups wurde.">
+  <meta name="robots" content="index, follow">
+  <title>DHDL Startup-Datenbank – Die Höhle der Löwen</title>
+
+  <!-- No external resources – fully GDPR compliant -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#1d1d1f"/>
+          <text x="14" y="20" text-anchor="middle" fill="white" font-size="16" font-weight="bold">L</text>
+        </svg>
+        DHDL<span>DB</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="pages/startups/" class="nav__link">Startups</a>
+        <a href="pages/investors/" class="nav__link">Investoren</a>
+        <a href="pages/seasons/" class="nav__link">Staffeln</a>
+        <a href="pages/was-wurde-aus/" class="nav__link">Was wurde aus…?</a>
+        <button class="nav__search-btn" id="searchBtn" type="button" aria-label="Suche öffnen">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Suche…
+          <kbd>⌘K</kbd>
+        </button>
+      </nav>
+
+      <button class="header__menu-btn" id="menuBtn" type="button" aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Search Modal ========== -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal__input-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-modal__input" id="searchInput" placeholder="Startup, Investor oder Produkt suchen…" autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="search-results__empty">Tippe einen Suchbegriff ein…</div>
+      </div>
+      <div class="search-modal__footer">
+        <span><kbd>↑↓</kbd> Navigieren</span>
+        <span><kbd>↵</kbd> Öffnen</span>
+        <span><kbd>Esc</kbd> Schließen</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Hero ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__badge">
+        🦁 Seit 2014 · 16 Staffeln · 500+ Startups
+      </div>
+      <h1 class="hero__title">Die komplette Datenbank<br>aller DHDL-Startups</h1>
+      <p class="hero__subtitle">
+        Entdecke alle Startups aus „Die Höhle der Löwen" – von der Pitch-Idee bis zum heutigen Status. Deals, Investoren und Erfolgsgeschichten.
+      </p>
+      <div class="hero__actions">
+        <a href="pages/startups/" class="btn btn--primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Startups entdecken
+        </a>
+        <a href="pages/seasons/" class="btn btn--secondary">
+          Alle Staffeln ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Stats ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__value">16</div>
+          <div class="stat__label">Staffeln</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">157</div>
+          <div class="stat__label">Episoden</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">500+</div>
+          <div class="stat__label">Startups</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">11</div>
+          <div class="stat__label">Investoren</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">42%</div>
+          <div class="stat__label">Deal-Quote</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Featured Startups ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Erfolgsgeschichten</h2>
+          <p class="section-header__subtitle">Die größten Erfolge aus der Höhle der Löwen</p>
+        </div>
+        <a href="pages/startups/" class="section-header__link">Alle Startups →</a>
+      </div>
+
+      <div class="grid grid--3">
+        <!-- Card: Ankerkraut -->
+        <article class="card">
+          <div class="card__image card__image--placeholder" aria-label="Ankerkraut">🧂</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--success">Exit</span>
+              <span>Staffel 3 · 2016</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/ankerkraut.html">Ankerkraut</a>
+            </h3>
+            <p class="card__description">
+              Premium Gewürze aus Hamburg. Von Frank Thelen finanziert, später von Nestlé übernommen – einer der größten DHDL-Exits aller Zeiten.
+            </p>
+            <div class="card__footer">
+              <span class="status status--acquired">
+                <span class="status__dot"></span>
+                Übernommen
+              </span>
+              <span class="tag">300.000 € Deal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: air up -->
+        <article class="card">
+          <div class="card__image card__image--placeholder" aria-label="air up">💧</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--info">Unicorn</span>
+              <span>Staffel 8 · 2020</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/air-up.html">air up</a>
+            </h3>
+            <p class="card__description">
+              Die Trinkflasche mit Duft-Pods revolutioniert den Getränkemarkt. Bewertung über 1 Mrd. € – das erste DHDL-Unicorn.
+            </p>
+            <div class="card__footer">
+              <span class="status status--growing">
+                <span class="status__dot"></span>
+                Wachsend
+              </span>
+              <span class="tag">400.000 € Deal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: YFood -->
+        <article class="card">
+          <div class="card__image card__image--placeholder" aria-label="YFood">🥤</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--success">Erfolg</span>
+              <span>Staffel 6 · 2019</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/yfood.html">YFood</a>
+            </h3>
+            <p class="card__description">
+              Vollwertige Trinkmahlzeiten für unterwegs. Heute bei REWE, dm und Rossmann – Umsatz im dreistelligen Millionenbereich.
+            </p>
+            <div class="card__footer">
+              <span class="status status--growing">
+                <span class="status__dot"></span>
+                Wachsend
+              </span>
+              <span class="tag">200.000 € Deal</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Investoren ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Die Löwen</h2>
+          <p class="section-header__subtitle">Die Investoren der Show im Überblick</p>
+        </div>
+        <a href="pages/investors/" class="section-header__link">Alle Investoren →</a>
+      </div>
+
+      <div class="investor-grid">
+        <a href="pages/investors/ralf-duemmel.html" class="investor-card">
+          <div class="investor-card__avatar">RD</div>
+          <div class="investor-card__name">Ralf Dümmel</div>
+          <div class="investor-card__role">DS Produkte</div>
+          <div class="investor-card__deals">120 Deals</div>
+        </a>
+
+        <a href="pages/investors/carsten-maschmeyer.html" class="investor-card">
+          <div class="investor-card__avatar">CM</div>
+          <div class="investor-card__name">Carsten Maschmeyer</div>
+          <div class="investor-card__role">Maschmeyer Group</div>
+          <div class="investor-card__deals">50 Deals</div>
+        </a>
+
+        <a href="pages/investors/judith-williams.html" class="investor-card">
+          <div class="investor-card__avatar">JW</div>
+          <div class="investor-card__name">Judith Williams</div>
+          <div class="investor-card__role">Cosmetics</div>
+          <div class="investor-card__deals">42 Deals</div>
+        </a>
+
+        <a href="pages/investors/georg-kofler.html" class="investor-card">
+          <div class="investor-card__avatar">GK</div>
+          <div class="investor-card__name">Georg Kofler</div>
+          <div class="investor-card__role">Social Chain</div>
+          <div class="investor-card__deals">38 Deals</div>
+        </a>
+
+        <a href="pages/investors/frank-thelen.html" class="investor-card">
+          <div class="investor-card__avatar">FT</div>
+          <div class="investor-card__name">Frank Thelen</div>
+          <div class="investor-card__role">Freigeist Capital</div>
+          <div class="investor-card__deals">35 Deals</div>
+        </a>
+
+        <a href="pages/investors/nico-rosberg.html" class="investor-card">
+          <div class="investor-card__avatar">NR</div>
+          <div class="investor-card__name">Nico Rosberg</div>
+          <div class="investor-card__role">Rosberg Ventures</div>
+          <div class="investor-card__deals">25 Deals</div>
+        </a>
+
+        <a href="pages/investors/nils-glagau.html" class="investor-card">
+          <div class="investor-card__avatar">NG</div>
+          <div class="investor-card__name">Nils Glagau</div>
+          <div class="investor-card__role">Orthomol</div>
+          <div class="investor-card__deals">28 Deals</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Neueste Startups ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Zuletzt hinzugefügt</h2>
+          <p class="section-header__subtitle">Neue Einträge in der Datenbank</p>
+        </div>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card card--horizontal">
+          <div class="card__image card__image--placeholder" aria-label="PAUDAR">🍳</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span>Staffel 6 · 2019</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/paudar.html">PAUDAR</a>
+            </h3>
+            <p class="card__description">
+              Bratfett in Pulverform – Innovation für die Küche. Deal mit Ralf Dümmel.
+            </p>
+            <div class="card__footer">
+              <span class="status status--growing">
+                <span class="status__dot"></span>
+                Wachsend
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--horizontal">
+          <div class="card__image card__image--placeholder" aria-label="Smartsleep">😴</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span>Staffel 6 · 2019</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/smartsleep.html">Smartsleep</a>
+            </h3>
+            <p class="card__description">
+              Wissenschaftlich entwickelte Schlaf-Nahrungsergänzung. Deal mit Carsten Maschmeyer.
+            </p>
+            <div class="card__footer">
+              <span class="status status--growing">
+                <span class="status__dot"></span>
+                Wachsend
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--horizontal">
+          <div class="card__image card__image--placeholder" aria-label="Pinky Gloves">🧤</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--danger">Gescheitert</span>
+              <span>Staffel 9 · 2021</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/pinky-gloves.html">Pinky Gloves</a>
+            </h3>
+            <p class="card__description">
+              Kontroverse Handschuhe zur Entsorgung von Hygieneprodukten. Massiver Shitstorm.
+            </p>
+            <div class="card__footer">
+              <span class="status status--closed">
+                <span class="status__dot"></span>
+                Eingestellt
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--horizontal">
+          <div class="card__image card__image--placeholder" aria-label="air up">💧</div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--info">Unicorn</span>
+              <span>Staffel 8 · 2020</span>
+            </div>
+            <h3 class="card__title">
+              <a href="pages/startups/air-up.html">air up</a>
+            </h3>
+            <p class="card__description">
+              Von DHDL zum Unicorn – die Duft-Trinkflasche mit über 1 Mrd. € Bewertung.
+            </p>
+            <div class="card__footer">
+              <span class="status status--growing">
+                <span class="status__dot"></span>
+                Wachsend
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Was wurde aus…? (SEO) ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Was wurde aus…?</h2>
+          <p class="section-header__subtitle">Die spannendsten Geschichten nach dem Pitch</p>
+        </div>
+        <a href="pages/was-wurde-aus/" class="section-header__link">Alle Geschichten →</a>
+      </div>
+
+      <div class="grid grid--2">
+        <a href="pages/was-wurde-aus/ankerkraut.html" class="card">
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--success">Mega-Exit</span>
+            </div>
+            <h3 class="card__title">Was wurde aus Ankerkraut nach Die Höhle der Löwen?</h3>
+            <p class="card__description">
+              Vom kleinen Gewürz-Startup zum Nestlé-Unternehmen. Die komplette Geschichte von Stefan und Anne Lemcke.
+            </p>
+          </div>
+        </a>
+
+        <a href="pages/was-wurde-aus/air-up.html" class="card">
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--info">Unicorn</span>
+            </div>
+            <h3 class="card__title">Was wurde aus air up nach Die Höhle der Löwen?</h3>
+            <p class="card__description">
+              Von 400.000 € Investment zu über 1 Milliarde Bewertung. Die unglaubliche Erfolgsgeschichte.
+            </p>
+          </div>
+        </a>
+
+        <a href="pages/was-wurde-aus/pinky-gloves.html" class="card">
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--danger">Kontroverse</span>
+            </div>
+            <h3 class="card__title">Was wurde aus Pinky Gloves nach Die Höhle der Löwen?</h3>
+            <p class="card__description">
+              Der wohl kontroverseste Pitch der Show-Geschichte. Wie ein Shitstorm zum Ende führte.
+            </p>
+          </div>
+        </a>
+
+        <a href="pages/was-wurde-aus/yfood.html" class="card">
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="tag tag--success">Erfolg</span>
+            </div>
+            <h3 class="card__title">Was wurde aus YFood nach Die Höhle der Löwen?</h3>
+            <p class="card__description">
+              Vom DHDL-Pitch in jeden Supermarkt. Wie YFood den Markt für Trinkmahlzeiten eroberte.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Staffeln ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-header__title">Staffeln</h2>
+          <p class="section-header__subtitle">Alle Staffeln von 2014 bis heute</p>
+        </div>
+        <a href="pages/seasons/" class="section-header__link">Alle Staffeln →</a>
+      </div>
+
+      <div class="grid grid--4" id="seasonsGrid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">DHDL Startup-Datenbank</div>
+          <p>
+            Die umfassende Datenbank aller Startups aus „Die Höhle der Löwen".
+            Ein Open-Source-Projekt – DSGVO-konform und ohne Tracking.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer__heading">Entdecken</div>
+          <a href="pages/startups/" class="footer__link">Alle Startups</a>
+          <a href="pages/investors/" class="footer__link">Investoren</a>
+          <a href="pages/seasons/" class="footer__link">Staffeln</a>
+          <a href="pages/was-wurde-aus/" class="footer__link">Was wurde aus…?</a>
+        </div>
+
+        <div>
+          <div class="footer__heading">Top-Listen</div>
+          <a href="#" class="footer__link">Erfolgreichste Startups</a>
+          <a href="#" class="footer__link">Größte Deals</a>
+          <a href="#" class="footer__link">Gescheiterte Startups</a>
+          <a href="#" class="footer__link">Unicorns</a>
+        </div>
+
+        <div>
+          <div class="footer__heading">Rechtliches</div>
+          <a href="pages/impressum.html" class="footer__link">Impressum</a>
+          <a href="pages/datenschutz.html" class="footer__link">Datenschutz</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>Kein offizielles Produkt von VOX oder RTL. Alle Markenrechte liegen bei den jeweiligen Inhabern.</span>
+        <span>Open Source · Kein Tracking · DSGVO-konform</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== GDPR Banner ========== -->
+  <div class="gdpr-banner" id="gdprBanner">
+    <div class="gdpr-banner__title">Datenschutz-Hinweis</div>
+    <p class="gdpr-banner__text">
+      Diese Website verwendet <strong>keine Cookies</strong>, kein Tracking und keine externen Dienste.
+      Alle Daten werden lokal verarbeitet. Es findet keine Datenübertragung an Dritte statt.
+    </p>
+    <div class="gdpr-banner__actions">
+      <button class="btn btn--primary btn--sm" id="gdprAccept">Verstanden</button>
+    </div>
+  </div>
+
+  <!-- Scripts – no external dependencies -->
+  <script src="js/app.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

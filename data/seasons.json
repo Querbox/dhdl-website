@@ -1,0 +1,18 @@
+[
+  { "id": 1, "year": 2014, "episodes": 9, "slug": "staffel-1", "channel": "VOX", "premiere": "2014-08-19" },
+  { "id": 2, "year": 2015, "episodes": 9, "slug": "staffel-2", "channel": "VOX", "premiere": "2015-08-25" },
+  { "id": 3, "year": 2016, "episodes": 10, "slug": "staffel-3", "channel": "VOX", "premiere": "2016-08-23" },
+  { "id": 4, "year": 2017, "episodes": 10, "slug": "staffel-4", "channel": "VOX", "premiere": "2017-09-05" },
+  { "id": 5, "year": 2018, "episodes": 10, "slug": "staffel-5", "channel": "VOX", "premiere": "2018-09-04" },
+  { "id": 6, "year": 2019, "episodes": 10, "slug": "staffel-6", "channel": "VOX", "premiere": "2019-09-03" },
+  { "id": 7, "year": 2020, "episodes": 8, "slug": "staffel-7", "channel": "VOX", "premiere": "2020-03-02" },
+  { "id": 8, "year": 2020, "episodes": 10, "slug": "staffel-8", "channel": "VOX", "premiere": "2020-09-07" },
+  { "id": 9, "year": 2021, "episodes": 10, "slug": "staffel-9", "channel": "VOX", "premiere": "2021-04-19" },
+  { "id": 10, "year": 2021, "episodes": 11, "slug": "staffel-10", "channel": "VOX", "premiere": "2021-09-06" },
+  { "id": 11, "year": 2022, "episodes": 10, "slug": "staffel-11", "channel": "VOX", "premiere": "2022-04-04" },
+  { "id": 12, "year": 2022, "episodes": 10, "slug": "staffel-12", "channel": "VOX", "premiere": "2022-09-05" },
+  { "id": 13, "year": 2023, "episodes": 10, "slug": "staffel-13", "channel": "VOX", "premiere": "2023-04-03" },
+  { "id": 14, "year": 2023, "episodes": 10, "slug": "staffel-14", "channel": "VOX", "premiere": "2023-09-04" },
+  { "id": 15, "year": 2024, "episodes": 10, "slug": "staffel-15", "channel": "VOX", "premiere": "2024-04-08" },
+  { "id": 16, "year": 2024, "episodes": 10, "slug": "staffel-16", "channel": "VOX", "premiere": "2024-09-02" }
+]
